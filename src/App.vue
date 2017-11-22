@@ -1,27 +1,38 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
-    <img src="./assets/logo.png">
-    <router-view/>
+    <el-row class="main">
+      <el-col :span="6">
+        <resume></resume>
+      </el-col>
+      <el-col :span="18">
+        <router-view/>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
+import Resume from './components/Resume'
 import NavBar from './components/NavBar'
 export default {
   name: 'app',
   components: {
-    NavBar
+    NavBar,
+    Resume
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-weight: 300;
+}
+.main {
+  width: 1200px;
+  margin: 30px auto;
 }
 </style>
