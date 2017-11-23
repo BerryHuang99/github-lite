@@ -6,6 +6,7 @@
         <resume></resume>
       </el-col>
       <el-col :span="18">
+        <profile-nav></profile-nav>
         <router-view/>
       </el-col>
     </el-row>
@@ -15,11 +16,14 @@
 <script>
 import Resume from './components/Resume'
 import NavBar from './components/NavBar'
+import ProfileNav from './components/ProfileNav'
+
 export default {
   name: 'app',
   components: {
     NavBar,
-    Resume
+    Resume,
+    ProfileNav
   }
 }
 </script>
@@ -30,6 +34,10 @@ export default {
   margin: 0;
   border: 0;
   font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: #666;
 }
 .main {
   width: 1200px;
