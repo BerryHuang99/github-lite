@@ -6,6 +6,14 @@
                 <div class="name">{{name}}</div>
                 <div class="username">{{userName}}</div>
                 <div class="sign">{{profile}}</div>
+            <div>
+                <el-collapse v-model="activeNames">
+                    <el-collapse-item title="more">
+                        <div class="location"><i class="el-icon-location">china</i></div>
+                        <div class="website"><a href="www.huangyufeng.com"><i class="el-icon-loading"></i>www.huangyufeng.com</a></div>
+                    </el-collapse-item>
+                </el-collapse>
+            </div>
             </div>
         </el-card>
     </div>
@@ -21,7 +29,8 @@ export default {
             avatar: '/static/avatar.png',
             profile: 'Live & create for freedom. Respect multielement.',
             location: '',
-            website: ''
+            website: '',
+            activeNames: ['1'],
         }
     }
 }
