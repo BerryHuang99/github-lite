@@ -1,9 +1,6 @@
 <template>
   <div class="home">
       <el-row>
-        <el-col :span="24">
-          <profile-nav></profile-nav>
-        </el-col>
         <el-col :span="12">
           <repository></repository>
         </el-col>
@@ -15,7 +12,6 @@
 </template>
 
 <script>
-import ProfileNav from '../ProfileNav'
 import Repository from '../Repository'
 
 export default {
@@ -25,8 +21,7 @@ export default {
     }
   },
   components: {
-    Repository,
-    ProfileNav
+    Repository
   }
 }
 </script>
