@@ -21,7 +21,11 @@
 <style scoped>
     a {
         display: inline-block;
-        height: 100%;
+        padding: 0px 25px;
         width: 100%;
+        height: 100%;
+    }
+    li {
+        padding: 0px;
     }
 </style>
