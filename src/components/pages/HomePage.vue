@@ -1,11 +1,8 @@
 <template>
   <div class="home">
       <el-row>
-        <el-col :span="12">
-          <repository></repository>
-        </el-col>
-        <el-col :span="12">
-          <repository></repository>
+        <el-col :span="12" v-for="item in repositories">
+          <repository :item="item"></repository>
         </el-col>
       </el-row>
   </div>
@@ -18,6 +15,16 @@ export default {
   name: 'HomePage',
   data () {
     return {
+      repositories: [{
+        name: 'name',
+        description: 'Personal experiments from Northeastern University.',
+        language: 'html'
+      },
+      {
+        name: 'name2',
+        description: 'Personal experiments from Northeastern University.',
+        language: 'html'
+      }],
     }
   },
   components: {
