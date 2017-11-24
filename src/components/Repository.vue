@@ -2,14 +2,14 @@
     <div class="repository">
         <el-card class="box-card">
             <div slot="header" class="clearfix">
-                <span>name</span>
+                <span>{{item.name}}</span>
             </div>
             <div class="text item">
-                Personal experiments from Northeastern University.
+                {{item.description}}
             </div>
             <div class="language">
-                <span class="color-circle"></span>html
-                <span class="update">update 30</span>
+                <span class="color-circle"></span>{{item.language}}
+                <span class="update">{{item.update}}</span>
             </div>
         </el-card>
     </div>
@@ -17,7 +17,8 @@
 
 <script>
     export default {
-        name: 'Repository'
+        name: 'Repository',
+        props: ['item']
     }
 </script>
 
