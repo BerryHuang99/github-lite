@@ -36,8 +36,8 @@ export default {
         blog: '',
         exist: false,
       },
-      repositories: '',
-      stars: '',
+      repositories: [],
+      stars: [],
     }
   },
   computed: {
@@ -53,7 +53,7 @@ export default {
       if (this.reNum > 6) {
        overview = overview.slice(0, 6);
       } else {
-        overview = overview.slice(0, reNum);
+        overview = overview.slice(0, this.reNum);
       }
       this.repositories.reverse();
       return overview;
