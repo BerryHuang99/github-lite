@@ -1,6 +1,6 @@
 <template>
     <el-row>
-        <el-col :span="24" v-for="item in repositories">
+        <el-col :span="24" v-for="item in stars">
             <repository :item="item"></repository>
         </el-col>
     </el-row>
@@ -10,16 +10,8 @@
 import Repository from "../Repository";
 
     export default {
-        data() {
-            return {
-                repositories: [{
-                name: 'name',
-                description: 'Personal experiments from Northeastern University.',
-                language: 'html',
-                update: 'Up date 30 days ago',
-            }],
-            }
-        },
+        name: 'Stars',
+        props: ['stars'],
         components: {
             Repository
         }

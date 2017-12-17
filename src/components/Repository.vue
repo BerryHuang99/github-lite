@@ -2,14 +2,14 @@
     <div class="repository">
         <el-card class="box-card">
             <div slot="header" class="clearfix">
-                <span>{{item.name}}</span>
+                <a :href="item.html_url"><span>{{item.name}}</span></a>
             </div>
             <div class="text item">
                 {{item.description}}
             </div>
             <div class="language">
                 <span class="color-circle"></span>{{item.language}}
-                <span class="update">{{item.update}}</span>
+                <span class="update">update:{{item.updated_at}}</span>
             </div>
         </el-card>
     </div>

@@ -1,16 +1,16 @@
 <template>
     <div class="resume">
         <el-card :body-style="{ padding: '0px' }">
-            <img v-bind:src="avatar" class="image">
+            <img v-bind:src="user.avatar" class="image">
             <div class="profile" style="padding: 14px;">
-                <div class="name">{{name}}</div>
-                <div class="username">{{userName}}</div>
-                <div class="sign">{{profile}}</div>
+                <div class="name">{{user.name}}</div>
+                <div class="username">{{user.nickName}}</div>
+                <div class="sign">{{user.biography}}</div>
             <div>
                 <el-collapse v-model="activeNames">
                     <el-collapse-item title="more">
-                        <div class="location"><i class="el-icon-location">china</i></div>
-                        <div class="website"><a href="www.huangyufeng.com"><i class="el-icon-loading"></i>www.huangyufeng.com</a></div>
+                        <div class="location"><i class="el-icon-location">{{user.location}}</i></div>
+                        <div class="website"><a href="www.huangyufeng.com"><i class="el-icon-loading"></i>{{user.blog}}</a></div>
                     </el-collapse-item>
                 </el-collapse>
             </div>
@@ -22,14 +22,9 @@
 <script>
 export default {
     name: "Resume",
+    props: ['user'],
     data() {
         return {
-            name: 'Berry Huang',
-            userName: 'BerryHuang99',
-            avatar: '/static/avatar.png',
-            profile: 'Live & create for freedom. Respect multielement.',
-            location: '',
-            website: '',
             activeNames: ['1'],
         }
     }

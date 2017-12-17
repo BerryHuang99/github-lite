@@ -1,12 +1,24 @@
 <template>
     <div class="nav-bar">
         <img src="../assets/logo.png">
-        <el-input class="input" placeholder="your github" prefix-icon="el-icon-search"></el-input>
+        <el-input @keyup.enter.native="search" v-model="input" 
+        class="input" placeholder="your github nickname" prefix-icon="el-icon-search"></el-input>
     </div>
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            input: '',
+        }
+    },
+    methods: {
+        search: function () {
+            this.$emit('search', this.input);
+            this.input = '';
+        }
+    }
     
 }
 </script>

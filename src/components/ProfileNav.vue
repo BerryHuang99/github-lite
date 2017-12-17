@@ -2,14 +2,15 @@
     <div class="profile-nav">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
             <el-menu-item index="1"><router-link to="/">Overview</router-link></el-menu-item>
-            <el-menu-item index="2"><router-link to="/repositories">Repositories</router-link></el-menu-item>
-            <el-menu-item index="3"><router-link to="/stars">Stars</router-link></el-menu-item>
+            <el-menu-item index="2"><router-link to="/repositories">Repositories<i>{{reNum}}</i></router-link></el-menu-item>
+            <el-menu-item index="3"><router-link to="/stars">Stars<i>{{sNum}}</i></router-link></el-menu-item>
         </el-menu>
     </div>
 </template>
 
 <script>
     export default {
+        props: ['reNum','sNum'],
         data() {
             return {
                 activeIndex: '1'

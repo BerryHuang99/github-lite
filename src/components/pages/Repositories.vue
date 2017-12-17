@@ -11,16 +11,7 @@ import Repository from "../Repository";
 
 export default {
     name: 'Repositories',
-    data() {
-        return {
-            repositories: [{
-                name: 'name',
-                description: 'Personal experiments from Northeastern University.',
-                language: 'html',
-                update: 'Up date 30 days ago',
-            }],
-        }
-    },
+    props: ['repositories'],
     components: {
         Repository
     }
