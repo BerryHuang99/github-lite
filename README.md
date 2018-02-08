@@ -1,6 +1,8 @@
 # github-lite
 
-> the github lite based on vue.js 2.0, element-ui & axios  
+> The github lite based on vue.js 2.0, element-ui & axios  
+
+> It based on the [github api](https://developer.github.com/v3/)
 
 ![screenshot](https://github.com/BerryHuang99/github-lite/blob/master/screenshot.png)
 
